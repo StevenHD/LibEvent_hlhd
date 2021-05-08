@@ -64,7 +64,7 @@ void accecptCallback(evutil_socket_t fd, short what, void* arg)
     }
 }
 
-void main_loop(int lsnFd)
+void main_loop_ser(int lsnFd)
 {
     struct event_base* base    = event_base_new();
     struct event* lsnEvent     = event_new(base, lsnFd, EV_READ | EV_PERSIST | EV_ET, accecptCallback, base);
@@ -77,7 +77,7 @@ void main_loop(int lsnFd)
     event_base_free(base);
 }
 
-int mainSer()
+int main()
 {
     struct sockaddr_in server_addr;
     bzero(&server_addr, sizeof(server_addr));
@@ -93,7 +93,7 @@ int mainSer()
         exit(0);
     }
     listen(lsnFd, 128);
-    main_loop(lsnFd);
+    main_loop_ser(lsnFd);
 
     return 0;
 }
