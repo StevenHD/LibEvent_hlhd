@@ -14,5 +14,6 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <event2/event.h>
+#include <event2/bufferevent.h>
 
 #endif //LIBEVENT_C_ALL_H

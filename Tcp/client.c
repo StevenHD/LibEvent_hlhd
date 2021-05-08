@@ -68,7 +68,7 @@ void main_loop(int socketFd)
     event_base_free(base);
 }
 
-int main()
+int maincl()
 {
     struct sockaddr_in server_addr;
     bzero(&server_addr, sizeof(server_addr));
