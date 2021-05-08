@@ -89,7 +89,7 @@ void main_loop_bufEvent(int lsnFd)
     event_base_free(base);
 }
 
-int main()
+int mainbugsvr()
 {
     /* Server's address struct init */
     struct sockaddr_in server_addr;
